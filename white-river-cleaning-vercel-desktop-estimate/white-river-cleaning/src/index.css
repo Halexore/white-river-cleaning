@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #0f172a; background: #f8fafc; }
+a { color: inherit; text-decoration: none; }
+main { min-height: 100vh; }
+.hero { position: relative; overflow: hidden; background: linear-gradient(135deg, #e0f2fe, #fff, #eff6ff); }
+.orb { position: absolute; width: 18rem; height: 18rem; border-radius: 999px; background: rgba(125, 211, 252, 0.4); filter: blur(60px); }
+.orbRight { top: -7rem; right: -7rem; }
+.orbLeft { bottom: -7rem; left: -7rem; }
+.heroGrid, .section, .twoCol, footer { max-width: 1152px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.heroGrid { position: relative; display: grid; gap: 40px; padding-top: 64px; padding-bottom: 64px; }
+.badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #bae6fd; background: rgba(255,255,255,0.85); color: #075985; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08); }
+h1 { margin: 20px 0 0; font-size: clamp(42px, 7vw, 72px); line-height: 0.95; letter-spacing: -0.04em; }
+h2 { margin: 10px 0 0; font-size: clamp(30px, 4vw, 42px); line-height: 1.08; letter-spacing: -0.03em; }
+h3 { margin: 0; font-size: 20px; }
+p { color: #475569; line-height: 1.7; }
+.heroText { max-width: 620px; font-size: 18px; margin-top: 22px; }
+.heroButtons { margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+.button { width: 100%; border: 0; border-radius: 18px; padding: 16px 24px; background: #0f172a; color: #fff; font-size: 16px; font-weight: 700; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18); cursor: pointer; }
+.buttonOutline { background: #fff; color: #0f172a; border: 1px solid #bae6fd; box-shadow: none; }
+.miniGrid { margin-top: 32px; display: grid; gap: 12px; color: #475569; font-size: 14px; }
+.miniGrid span, .checkList div, .contactBox p { display: flex; align-items: center; gap: 8px; }
+.miniGrid svg, .checkList svg { color: #0369a1; }
+.card { background: rgba(255,255,255,0.95); border: 1px solid #e2e8f0; border-radius: 32px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06); }
+.featureCard, .serviceCard, .infoCard, .formCard { padding: 28px; }
+.featureCard { box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16); border-color: #e0f2fe; }
+.iconBox { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 18px; background: #e0f2fe; color: #075985; margin-bottom: 24px; }
+.iconBox.small { width: 48px; height: 48px; margin-bottom: 20px; }
+.quote { margin: 0; font-size: 28px; font-weight: 800; color: #020617; line-height: 1.2; }
+.bodyText { margin-top: 18px; }
+.notice, .contactBox { margin-top: 24px; border-radius: 22px; background: #f8fafc; padding: 18px; }
+.noticeTitle, .contactTitle { color: #0f172a; font-weight: 800; margin: 0; }
+.section { padding-top: 64px; padding-bottom: 64px; }
+.sectionIntro { max-width: 720px; }
+.eyebrow { margin: 0; font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.15em; color: #0369a1; }
+.serviceGrid { margin-top: 40px; display: grid; gap: 20px; }
+.serviceCard { transition: 0.2s ease; }
+.serviceCard:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12); }
+.whiteSection { background: #fff; padding-top: 64px; padding-bottom: 64px; }
+.twoCol { display: grid; gap: 32px; }
+.stack { display: grid; gap: 16px; }
+.reason { display: flex; gap: 16px; border: 1px solid #f1f5f9; background: #f8fafc; border-radius: 24px; padding: 20px; }
+.reasonIcon { flex: 0 0 auto; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: #fff; color: #075985; border-radius: 16px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06); }
+.reason p { margin: 4px 0 0; font-size: 14px; }
+.quotePanel { background: #0f172a; color: #fff; border-radius: 32px; padding: 32px; display: grid; gap: 18px; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18); }
+.quoteTile { background: rgba(255,255,255,0.1); border-radius: 24px; padding: 24px; font-size: 19px; line-height: 1.6; font-weight: 700; }
+.infoCard h2 { margin-top: 0; }
+.checkList { display: grid; gap: 12px; margin-top: 24px; color: #475569; font-size: 14px; }
+.policy { margin-top: 18px; }
+.policy p { margin: 0; color: #0f172a; font-weight: 800; line-height: 1.3; }
+.policy span { display: block; margin-top: 4px; color: #475569; line-height: 1.6; font-size: 14px; }
+.bookingSection { background: #f0f9ff; padding-top: 64px; padding-bottom: 64px; }
+.contactBox p { margin: 8px 0; }
+.formCard { display: grid; gap: 16px; }
+label { display: grid; gap: 8px; font-size: 14px; font-weight: 700; }
+input, select, textarea { width: 100%; border: 1px solid #e2e8f0; border-radius: 18px; padding: 14px 16px; font: inherit; outline: none; background: white; }
+input:focus, select:focus, textarea:focus { border-color: #38bdf8; box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12); }
+textarea { min-height: 112px; resize: vertical; }
+.smallText { margin: 0; font-size: 12px; line-height: 1.6; color: #64748b; }
+footer { display: flex; flex-direction: column; gap: 8px; padding-top: 32px; padding-bottom: 32px; font-size: 14px; }
+footer p { margin: 0; }
+@media (min-width: 768px) {
+  .heroGrid { grid-template-columns: 1fr 1fr; align-items: center; padding-top: 96px; padding-bottom: 96px; }
+  .heroButtons { flex-direction: row; }
+  .button { width: auto; }
+  .miniGrid { grid-template-columns: repeat(3, 1fr); }
+  .serviceGrid { grid-template-columns: repeat(3, 1fr); }
+  .twoCol { grid-template-columns: repeat(2, 1fr); align-items: start; }
+  .quotePanel { grid-template-columns: repeat(3, 1fr); padding: 48px; }
+  footer { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+.desktopNote { margin-top: 14px; font-size: 14px; color: #334155; background: #fff; border: 1px solid #e0f2fe; border-radius: 18px; padding: 14px 16px; }
+.formActions { display: grid; gap: 12px; }
+.formActions a { display: block; }
+.formActions .button { width: 100%; }
+.requestPreview { border: 1px solid #e2e8f0; background: #f8fafc; border-radius: 18px; padding: 14px 16px; }
+.requestPreview p { margin: 0 0 6px; color: #0f172a; font-weight: 800; font-size: 13px; }
+.requestPreview span { display: block; color: #475569; font-size: 13px; line-height: 1.6; word-break: break-word; }
